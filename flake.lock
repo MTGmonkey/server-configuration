@@ -1,0 +1,96 @@
+{
+  "nodes": {
+    "elmskell-blog": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1749377392,
+        "narHash": "sha256-h9XPJ30WwPelj9U5lfwxePs8Mb408egKFszG635StGY=",
+        "ref": "refs/heads/master",
+        "rev": "255615b8389f480c4ea3ce647f9d2ed792916c08",
+        "revCount": 6,
+        "type": "git",
+        "url": "file:///var/lib/git-server/blog.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///var/lib/git-server/blog.git"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1749143949,
+        "narHash": "sha256-QuUtALJpVrPnPeozlUG/y+oIMSLdptHxb3GK6cpSVhA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d3d2d80a2191a73d1e86456a751b83aa13085d7d",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1749373575,
+        "narHash": "sha256-/3nvhGaUMG1A6zG185QHyTFR2fMiyffxU7VdMYk5qj0=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "6a8d437617048567166f83b32d07ba73aeb2d125",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "release-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1714253743,
+        "narHash": "sha256-mdTQw2XlariysyScCv2tTE45QSU9v/ezLcHJ22f0Nxc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "58a1abdbae3217ca6b702f03d3b35125d88a2994",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "noshell": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1717396029,
+        "narHash": "sha256-NPIhvnTYkJZqTY+aabbZ6CAaMAgG6IISvh7GZo1MTfQ=",
+        "owner": "viperML",
+        "repo": "noshell",
+        "rev": "4d194d838a50ea106cd0e47c024e47afc154ab42",
+        "type": "github"
+      },
+      "original": {
+        "owner": "viperML",
+        "repo": "noshell",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "elmskell-blog": "elmskell-blog",
+        "nixpkgs": "nixpkgs_2",
+        "noshell": "noshell"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
