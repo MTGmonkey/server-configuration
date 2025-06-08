@@ -1,5 +1,4 @@
 {
-  elmskell-blog,
   lib,
   pkgs,
   ...

@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1749377392,
-        "narHash": "sha256-h9XPJ30WwPelj9U5lfwxePs8Mb408egKFszG635StGY=",
+        "lastModified": 1749395936,
+        "narHash": "sha256-tEqZKBzQbENlyIDvVMWcnhifjEQkaEzK3eKDQWCbt58=",
         "ref": "refs/heads/master",
-        "rev": "255615b8389f480c4ea3ce647f9d2ed792916c08",
-        "revCount": 6,
+        "rev": "36fa8afd57449cacdc0535417c8d20fb6b702348",
+        "revCount": 9,
         "type": "git",
         "url": "file:///var/lib/git-server/blog.git"
       },

@@ -26,7 +26,9 @@
         ./services/elmskell.nix
         ./services/ferron.nix
         ./services/rgit.nix
-        #        ./services/mattermost.nix
+        ./services/blog.nix
+
+        ./services/spacebar-client.nix
 
         noshell.nixosModules.default
         {programs.noshell.enable = true;}
