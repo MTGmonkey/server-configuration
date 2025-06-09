@@ -1,6 +1,8 @@
-{pkgs, ...}: let
-  ssh-pub-keys = import ./ssh-pub-keys.nix;
-in {
+{
+  pkgs,
+  ssh-pub-keys,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
   ];

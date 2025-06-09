@@ -30,8 +30,8 @@
         proxyTo = "http://localhost:9780/";
       }
       {
-        domain = "www.mtgmonkey.net";
-        proxyTo = "http://localhost:9080/";
+        domain = "spacebar-api.mtgmonkey.net";
+        proxyTo = "http://localhost:3001/";
       }
     ];
   };
