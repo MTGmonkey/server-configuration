@@ -5,6 +5,7 @@
     noshell.url = "github:viperML/noshell";
     elmskell-blog.url = "git+file:///var/lib/git-server/blog.git";
     spacebar-server.url = "github:spacebarchat/server";
+    jank-client.url = "git+file:///var/lib/git-server/jank-client-fork.git";
   };
 
   outputs = {
@@ -13,6 +14,7 @@
     noshell,
     elmskell-blog,
     spacebar-server,
+    jank-client,
     ...
   }: let
     system = "x86_64-linux";
@@ -37,6 +39,12 @@
 
         noshell.nixosModules.default
         {programs.noshell.enable = true;}
+
+        jank-client.nixosModules.x86_64-linux.default
+        {
+          services.jank-client.enable = true;
+          services.jank-client.port = 8282;
+        }
 
         ./configuration.nix
       ];
