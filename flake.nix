@@ -39,6 +39,8 @@
         ./services/spacebar.nix
         ./services/rgit.nix
 
+        ./services/translate.nix
+
         noshell.nixosModules.default
         {programs.noshell.enable = true;}
 

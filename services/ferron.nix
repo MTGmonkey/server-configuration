@@ -33,6 +33,11 @@
         domain = "spacebar-api.mtgmonkey.net";
         proxyTo = "http://localhost:3001/";
       }
+      {
+        domain = "translate.mtgmonkey.net";
+        proxyTo = "http://localhost:9109/"
+      }
+
     ];
   };
 in {
