@@ -3,8 +3,9 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/release-25.05";
     noshell.url = "github:viperML/noshell";
-    elmskell-blog.url = "git+file:///var/lib/git-server/blog.git";
     spacebar-server.url = "github:spacebarchat/server";
+
+    elmskell-blog.url = "git+file:///var/lib/git-server/blog.git";
     jank-client.url = "git+file:///var/lib/git-server/jank-client-fork.git";
   };
 
@@ -34,17 +35,12 @@
         ./services/elmskell.nix
         ./services/blog.nix
 
+        jank-client.nixosModules.x86_64-linux.default
         ./services/spacebar.nix
         ./services/rgit.nix
 
         noshell.nixosModules.default
         {programs.noshell.enable = true;}
-
-        jank-client.nixosModules.x86_64-linux.default
-        {
-          services.jank-client.enable = true;
-          services.jank-client.port = 8282;
-        }
 
         ./configuration.nix
       ];

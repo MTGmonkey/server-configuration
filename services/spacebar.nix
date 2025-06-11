@@ -62,4 +62,8 @@ in {
     openssh.authorizedKeys.keys = ssh-pub-keys;
   };
   users.groups.spacebar = {};
+  services.jank-client = {
+    enable = true;
+    port = 8282;
+  };
 }
