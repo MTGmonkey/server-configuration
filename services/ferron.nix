@@ -22,6 +22,10 @@
         proxyTo = "http://localhost:9181/";
       }
       {
+        domain = "math.mtgmonkey.net";
+        proxyTo = "http://localhost:9282/";
+      }
+      {
         domain = "git.mtgmonkey.net";
         proxyTo = "http://localhost:8000/";
       }
@@ -35,9 +39,8 @@
       }
       {
         domain = "translate.mtgmonkey.net";
-        proxyTo = "http://localhost:9109/"
+        proxyTo = "http://localhost:9109/";
       }
-
     ];
   };
 in {
