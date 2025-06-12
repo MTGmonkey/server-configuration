@@ -7,6 +7,7 @@
 
     elmskell-blog.url = "git+file:///var/lib/git-server/blog.git";
     jank-client.url = "git+file:///var/lib/git-server/jank-client-fork.git";
+    math-project.url = "git+file:///var/lib/git-server/math-project.git";
   };
 
   outputs = {
@@ -16,6 +17,7 @@
     elmskell-blog,
     spacebar-server,
     jank-client,
+    math-project,
     ...
   }: let
     system = "x86_64-linux";
@@ -43,6 +45,10 @@
 
         noshell.nixosModules.default
         {programs.noshell.enable = true;}
+
+        math-project.nixosModules.default
+        {programs.math-project.enable = true;}
+        ./services/math-project.nix
 
         ./configuration.nix
       ];
