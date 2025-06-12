@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1749395936,
-        "narHash": "sha256-tEqZKBzQbENlyIDvVMWcnhifjEQkaEzK3eKDQWCbt58=",
+        "lastModified": 1749494299,
+        "narHash": "sha256-I6/TSz5ciJTEZNFCyrCXWRYqBkNIh3fZy67UErIw3fk=",
         "ref": "refs/heads/master",
-        "rev": "36fa8afd57449cacdc0535417c8d20fb6b702348",
-        "revCount": 9,
+        "rev": "596af4a7318d60816ee995526d571643e21744b5",
+        "revCount": 11,
         "type": "git",
         "url": "file:///var/lib/git-server/blog.git"
       },
@@ -36,6 +36,24 @@
         "type": "github"
       }
     },
+    "jank-client": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1749606892,
+        "narHash": "sha256-ZGUUWNORko3QFy9p/2mc4voJ65/11Joy6Au79+TwxPw=",
+        "ref": "refs/heads/main",
+        "rev": "0e59a339c813bcf1e9969344d8b50ed380231552",
+        "revCount": 1179,
+        "type": "git",
+        "url": "file:///var/lib/git-server/jank-client-fork.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///var/lib/git-server/jank-client-fork.git"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1749143949,
@@ -53,11 +71,26 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1749373575,
-        "narHash": "sha256-/3nvhGaUMG1A6zG185QHyTFR2fMiyffxU7VdMYk5qj0=",
+        "lastModified": 1749285348,
+        "narHash": "sha256-frdhQvPbmDYaScPFiCnfdh3B/Vh81Uuoo0w5TkWmmjU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3e3afe5174c561dee0df6f2c2b2236990146329f",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1749658098,
+        "narHash": "sha256-VCerWubROWYfKu027Y4IZdtjN+3qr2WCGhX+mUGW5wk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "6a8d437617048567166f83b32d07ba73aeb2d125",
+        "rev": "f1af0317e6a912fa23430de110e8665027bd5a7a",
         "type": "github"
       },
       "original": {
@@ -67,7 +100,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1714253743,
         "narHash": "sha256-mdTQw2XlariysyScCv2tTE45QSU9v/ezLcHJ22f0Nxc=",
@@ -83,7 +116,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1746141548,
         "narHash": "sha256-IgBWhX7A2oJmZFIrpRuMnw5RAufVnfvOgHWgIdds+hc=",
@@ -101,7 +134,7 @@
     },
     "noshell": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "lastModified": 1717396029,
@@ -120,7 +153,8 @@
     "root": {
       "inputs": {
         "elmskell-blog": "elmskell-blog",
-        "nixpkgs": "nixpkgs_2",
+        "jank-client": "jank-client",
+        "nixpkgs": "nixpkgs_3",
         "noshell": "noshell",
         "spacebar-server": "spacebar-server"
       }
@@ -128,7 +162,7 @@
     "spacebar-server": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1748414795,

@@ -41,7 +41,7 @@ in {
   systemd.services.translate = {
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${lib.getExe pkgs.libretranslate}";
+      ExecStart = "${lib.getExe pkgs.libretranslate} --port 8108";
       RemainAfterExit = true;
     };
   };
