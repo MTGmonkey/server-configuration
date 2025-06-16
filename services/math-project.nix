@@ -29,7 +29,7 @@ in {
         METRICS_BIND = "[::1]:9283";
         METRICS_BIND_NETWORK = "tcp";
         POLICY_FNAME = "/etc/anubis/math-project.botPolicies.yaml";
-        TARGET = "http://localhost:8080";
+        TARGET = "http://localhost:8081";
       };
     };
   };
@@ -42,7 +42,7 @@ in {
   systemd.services.math-project = {
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${lib.getExe math-project}";
+      ExecStart = "${lib.getExe math-project.packages.x86_64-linux.default}";
       RemainAfterExit = true;
     };
   };

@@ -29,6 +29,7 @@
         inherit system;
         inherit elmskell-blog;
         inherit spacebar-server;
+        inherit math-project;
         ssh-pub-keys = import ./ssh-pub-keys.nix;
       };
       modules = [
@@ -46,8 +47,8 @@
         noshell.nixosModules.default
         {programs.noshell.enable = true;}
 
-        math-project.nixosModules.default
-        {programs.math-project.enable = true;}
+        math-project.nixosModules.x86_64-linux.default
+        {services.math-project.enable = true;}
         ./services/math-project.nix
 
         ./configuration.nix

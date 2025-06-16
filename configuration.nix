@@ -12,7 +12,8 @@
   networking.domain = "";
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [80 443];
+    allowedTCPPorts = [80 443 9418];
+    allowedUDPPorts = [80 443 9418];
   };
   boot.loader.grub.devices = ["nodev"];
 

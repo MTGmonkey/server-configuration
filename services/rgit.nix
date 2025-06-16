@@ -7,6 +7,7 @@
     image = "ghcr.io/w4/rgit:main";
     ports = [
       "8000:8000"
+      "9418:9418"
     ];
     volumes = [
       "/var/lib/git-server:/git:ro"

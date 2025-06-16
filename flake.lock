@@ -54,6 +54,24 @@
         "url": "file:///var/lib/git-server/jank-client-fork.git"
       }
     },
+    "math-project": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1749728695,
+        "narHash": "sha256-ZeWhAif+eh/ObPxceqQcuvtvxreXTNcHnhWEbPAuppM=",
+        "ref": "refs/heads/master",
+        "rev": "c35a0b510854103f466adca6b60f50822893daca",
+        "revCount": 5,
+        "type": "git",
+        "url": "file:///var/lib/git-server/math-project.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///var/lib/git-server/math-project.git"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1749143949,
@@ -86,6 +104,21 @@
     },
     "nixpkgs_3": {
       "locked": {
+        "lastModified": 1748889542,
+        "narHash": "sha256-Hb4iMhIbjX45GcrgOp3b8xnyli+ysRPqAgZ/LZgyT5k=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "10d7f8d34e5eb9c0f9a0485186c1ca691d2c5922",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-25.05",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
         "lastModified": 1749658098,
         "narHash": "sha256-VCerWubROWYfKu027Y4IZdtjN+3qr2WCGhX+mUGW5wk=",
         "owner": "nixos",
@@ -100,7 +133,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1714253743,
         "narHash": "sha256-mdTQw2XlariysyScCv2tTE45QSU9v/ezLcHJ22f0Nxc=",
@@ -116,7 +149,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1746141548,
         "narHash": "sha256-IgBWhX7A2oJmZFIrpRuMnw5RAufVnfvOgHWgIdds+hc=",
@@ -134,7 +167,7 @@
     },
     "noshell": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1717396029,
@@ -154,7 +187,8 @@
       "inputs": {
         "elmskell-blog": "elmskell-blog",
         "jank-client": "jank-client",
-        "nixpkgs": "nixpkgs_3",
+        "math-project": "math-project",
+        "nixpkgs": "nixpkgs_4",
         "noshell": "noshell",
         "spacebar-server": "spacebar-server"
       }
@@ -162,7 +196,7 @@
     "spacebar-server": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1748414795,
