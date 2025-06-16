@@ -10,6 +10,7 @@
   boot.tmp.cleanOnBoot = true;
   networking.hostName = "server";
   networking.domain = "";
+  networking.enableIPv6 = true;
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [80 443 9418];
@@ -33,12 +34,6 @@
       MaxSessions 4
       TCPKeepAlive no
     '';
-  };
-
-  services.fail2ban = {
-    enable = true;
-    maxretry = 10;
-    bantime-increment.enable = true;
   };
 
   users.users.mtgmonkey = {
