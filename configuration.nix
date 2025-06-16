@@ -10,7 +10,7 @@
   boot.tmp.cleanOnBoot = true;
   networking.hostName = "server";
   networking.domain = "";
-  networking.enableIPv6 = true;
+  networking.enableIPv6 = false;
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [80 443 9418];

@@ -20,5 +20,6 @@
     environment = {
       REFRESH_INTERVAL = "5m";
     };
+    user = "git:git";
   };
 }
