@@ -50,6 +50,7 @@ in {
       ExecStart = "${lib.getExe pkgs.ferron} --config=/etc/ferron.yaml";
       RemainAfterExit = true;
     };
+    wantedBy = ["multi-user.target"];
   };
 
   environment.etc."ferron.yaml" = {

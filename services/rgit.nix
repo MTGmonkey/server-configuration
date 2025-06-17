@@ -1,25 +1,16 @@
-{
-  virtualisation.docker = {
-    enable = true;
-  };
-  virtualisation.oci-containers.backend = "docker";
-  virtualisation.oci-containers.containers.rgit = {
-    image = "ghcr.io/w4/rgit:main";
-    ports = [
-      "8000:8000"
-      "9418:9418"
-    ];
-    volumes = [
-      "/var/lib/git-server:/git:ro"
-    ];
-    cmd = [
-      "[::]:8000"
-      "/git"
-      "-d /tmp/rgit-cache.db"
-    ];
-    environment = {
-      REFRESH_INTERVAL = "5m";
+{rgit, ...}: {
+  systemd.services.rgit = {
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${rgit.packages.x86_64-linux.default}/bin/rgit -d /var/lib/git-server/.db/rgit-cache.db [::1]:3000 /var/lib/git-server";
+      RemainAfterExit = true;
+      Restart = "always";
+      RestartMaxDelay = "1m";
+      RestartSec = "100ms";
+      RestartSteps = 9;
+      User = "git";
+      Group = "git";
     };
-    user = "git:git";
+    wantedBy = ["multi-user.target"];
   };
 }

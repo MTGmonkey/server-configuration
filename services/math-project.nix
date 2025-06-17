@@ -44,6 +44,11 @@ in {
       Type = "simple";
       ExecStart = "${lib.getExe math-project.packages.x86_64-linux.default}";
       RemainAfterExit = true;
+      Restart = "always";
+      RestartMaxDelaySec = "1m";
+      RestartSec = "100ms";
+      RestartSteps = 9;
     };
+    wantedBy = ["multi-user.target"];
   };
 }

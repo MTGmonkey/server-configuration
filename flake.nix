@@ -1,9 +1,10 @@
 {
   description = "server flake";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-25.05";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     noshell.url = "github:viperML/noshell";
     spacebar-server.url = "github:spacebarchat/server";
+    rgit.url = "github:w4/rgit";
 
     elmskell-blog.url = "git+file:///var/lib/git-server/blog.git";
     jank-client.url = "git+file:///var/lib/git-server/jank-client-fork.git";
@@ -18,6 +19,7 @@
     spacebar-server,
     jank-client,
     math-project,
+    rgit,
     ...
   }: let
     system = "x86_64-linux";
@@ -30,6 +32,7 @@
         inherit elmskell-blog;
         inherit spacebar-server;
         inherit math-project;
+        inherit rgit;
         ssh-pub-keys = import ./ssh-pub-keys.nix;
       };
       modules = [

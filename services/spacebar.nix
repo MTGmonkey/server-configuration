@@ -45,7 +45,12 @@ in {
       RemainAfterExit = true;
       User = "spacebar";
       Group = "spacebar";
+      Restart = "always";
+      RestartMaxDelaySec = "1m";
+      RestartSec = "100ms";
+      RestartSteps = 9;
     };
+    wantedBy = ["multi-user.target"];
     environment = {
       DATABASE = "/var/lib/spacebar-server/database.db";
       STORAGE_LOCATION = "/var/lib/spacebar-server/files/";
