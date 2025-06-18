@@ -12,7 +12,8 @@
   networking.domain = "";
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [80 443];
+    allowedTCPPorts = [80 443 9418];
+    allowedUDPPorts = [80 443 9418];
   };
   boot.loader.grub.devices = ["nodev"];
 
@@ -32,12 +33,6 @@
       MaxSessions 4
       TCPKeepAlive no
     '';
-  };
-
-  services.fail2ban = {
-    enable = true;
-    maxretry = 10;
-    bantime-increment.enable = true;
   };
 
   users.users.mtgmonkey = {

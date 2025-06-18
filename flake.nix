@@ -1,7 +1,7 @@
 {
   description = "server flake";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-25.05";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     noshell.url = "github:viperML/noshell";
     spacebar-server.url = "github:spacebarchat/server";
 
@@ -40,7 +40,8 @@
 
         jank-client.nixosModules.x86_64-linux.default
         ./services/spacebar.nix
-        ./services/rgit.nix
+        #        ./services/rgit.nix
+        ./services/gitea.nix
 
         ./services/translate.nix
 

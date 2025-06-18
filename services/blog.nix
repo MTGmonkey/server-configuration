@@ -49,7 +49,12 @@ in {
       Type = "simple";
       ExecStart = "${lib.getExe pkgs.ferron} --config=/etc/blog.ferron.yaml";
       RemainAfterExit = true;
+      Restart = "always";
+      RestartMaxDelaySec = "1m";
+      RestartSec = "100ms";
+      RestartSteps = 9;
     };
+    wantedBy = ["multi-user.target"];
   };
   environment.etc."blog.ferron.yaml" = {
     source = (pkgs.formats.yaml {}).generate "" ferron-conf-nix;

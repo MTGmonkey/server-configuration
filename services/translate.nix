@@ -41,8 +41,13 @@ in {
   systemd.services.translate = {
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${lib.getExe pkgs.libretranslate}";
+      ExecStart = "${lib.getExe pkgs.libretranslate} --port 8108";
       RemainAfterExit = true;
+      Restart = "always";
+      RestartMaxDelaySec = "1m";
+      RestartSec = "100ms";
+      RestartSteps = 9;
     };
+    wantedBy = ["multi-user.target"];
   };
 }

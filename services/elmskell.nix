@@ -39,7 +39,12 @@ in {
       Type = "simple";
       ExecStart = "/etc/nixos/services/elmskell/elmskell";
       RemainAfterExit = true;
+      Restart = "always";
+      RestartMaxDelaySec = "1m";
+      RestartSec = "100ms";
+      RestartSteps = 9;
     };
+    wantedBy = ["multi-user.target"];
   };
   services.tor = {
     enable = true;
