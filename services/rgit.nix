@@ -2,7 +2,7 @@
   systemd.services.rgit = {
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${rgit.packages.x86_64-linux.default}/bin/rgit -d /var/lib/git-server/.db/rgit-cache.db [::1]:3000 /var/lib/git-server";
+      ExecStart = "${rgit.packages.x86_64-linux.default}/bin/rgit -d /var/lib/git-server/.db/rgit-cache.db [::1]:8000 /var/lib/git-server";
       RemainAfterExit = true;
       Restart = "always";
       RestartMaxDelay = "1m";

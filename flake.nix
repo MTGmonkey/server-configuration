@@ -43,7 +43,8 @@
 
         jank-client.nixosModules.x86_64-linux.default
         ./services/spacebar.nix
-        ./services/rgit.nix
+        #        ./services/rgit.nix
+        ./services/gitea.nix
 
         ./services/translate.nix
 

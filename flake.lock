@@ -106,11 +106,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1749728695,
-        "narHash": "sha256-ZeWhAif+eh/ObPxceqQcuvtvxreXTNcHnhWEbPAuppM=",
+        "lastModified": 1750258769,
+        "narHash": "sha256-BazJgo04yFqFfp2AA0Tfba+nBAeaNddQJBdLghVJskk=",
         "ref": "refs/heads/master",
-        "rev": "c35a0b510854103f466adca6b60f50822893daca",
-        "revCount": 5,
+        "rev": "fa0e8ca47dd5341d24d8aae90a0bc28a689c3d46",
+        "revCount": 6,
         "type": "git",
         "url": "file:///var/lib/git-server/math-project.git"
       },
