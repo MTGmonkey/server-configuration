@@ -5,9 +5,9 @@
     noshell.url = "github:viperML/noshell";
     spacebar-server.url = "github:spacebarchat/server";
 
-    elmskell-blog.url = "git+file:///var/lib/git-server/blog.git";
-    jank-client.url = "git+file:///var/lib/git-server/jank-client-fork.git";
-    math-project.url = "git+file:///var/lib/git-server/math-project.git";
+    elmskell-blog.url = "git+https://git.mtgmonkey.net/Andromeda/blog.git";
+    jank-client.url = "git+https://git.mtgmonkey.net/Andromeda/jank-client-fork.git";
+    math-project.url = "git+https://git.mtgmonkey.net/Andromeda/math-project.git";
   };
 
   outputs = {
@@ -29,6 +29,7 @@
         inherit system;
         inherit elmskell-blog;
         inherit spacebar-server;
+        inherit math-project;
         ssh-pub-keys = import ./ssh-pub-keys.nix;
       };
       modules = [
@@ -46,8 +47,8 @@
         noshell.nixosModules.default
         {programs.noshell.enable = true;}
 
-        math-project.nixosModules.default
-        {programs.math-project.enable = true;}
+        math-project.nixosModules.x86_64-linux.default
+        {services.math-project.enable = true;}
         ./services/math-project.nix
 
         ./configuration.nix

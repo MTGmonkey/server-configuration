@@ -42,7 +42,7 @@ in {
   systemd.services.math-project = {
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${lib.getExe math-project}";
+      ExecStart = "${lib.getExe math-project.packages.x86_64-linux.default}";
       RemainAfterExit = true;
     };
   };
