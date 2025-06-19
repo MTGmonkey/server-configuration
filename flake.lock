@@ -6,11 +6,11 @@
         "rust-http-server": "rust-http-server"
       },
       "locked": {
-        "lastModified": 1750328206,
-        "narHash": "sha256-qRr6Vrwk/SWNSPx4jAvs5e41tteUWIE+Kqz77Wi0kJ4=",
+        "lastModified": 1750341141,
+        "narHash": "sha256-6aVmNXmX+cDh+bCAPBOTfeSm/UI3/iRY6xA9ZQdUdQg=",
         "ref": "refs/heads/master",
-        "rev": "5b4e18fd21f174a2c9afa0f8be897cb60a14154d",
-        "revCount": 5,
+        "rev": "50c9b7fbfa6862ded556d178b8234332f6fc3f9e",
+        "revCount": 8,
         "type": "git",
         "url": "https://git.mtgmonkey.net/Andromeda/best-blog.git"
       },
@@ -247,11 +247,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1750103311,
-        "narHash": "sha256-aefZc/S5xu26OeNjUXA9whnAK9D7lWejqrqQ2xfPw+U=",
+        "lastModified": 1750341039,
+        "narHash": "sha256-iT6qEBuHJMEAFDnRNUydh6eJu7LX4OklUy0CpOtz/tg=",
         "ref": "refs/heads/master",
-        "rev": "02acb04f650b494de1dfb78474bf7e397e0f2995",
-        "revCount": 1,
+        "rev": "d214b0bf8646ee7f2f0792bbf3b96db8dacc2468",
+        "revCount": 3,
         "type": "git",
         "url": "https://git.mtgmonkey.net/Andromeda/rust-http-server.git"
       },
