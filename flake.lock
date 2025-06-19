@@ -1,8 +1,27 @@
 {
   "nodes": {
+    "best-blog": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "rust-http-server": "rust-http-server"
+      },
+      "locked": {
+        "lastModified": 1750328206,
+        "narHash": "sha256-qRr6Vrwk/SWNSPx4jAvs5e41tteUWIE+Kqz77Wi0kJ4=",
+        "ref": "refs/heads/master",
+        "rev": "5b4e18fd21f174a2c9afa0f8be897cb60a14154d",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://git.mtgmonkey.net/Andromeda/best-blog.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.mtgmonkey.net/Andromeda/best-blog.git"
+      }
+    },
     "elmskell-blog": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1749494299,
@@ -38,7 +57,7 @@
     },
     "jank-client": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "lastModified": 1749606892,
@@ -56,7 +75,7 @@
     },
     "math-project": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1750258769,
@@ -74,6 +93,36 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1750134718,
+        "narHash": "sha256-v263g4GbxXv87hMXMCpjkIxd/viIF7p3JpJrwgKdNiI=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9e83b64f727c88a7711a2c463a7b16eedb69a84c",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1749794982,
+        "narHash": "sha256-Kh9K4taXbVuaLC0IL+9HcfvxsSUx8dPB5s5weJcc9pc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ee930f9755f58096ac6e8ca94a1887e0534e2d81",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1749143949,
         "narHash": "sha256-QuUtALJpVrPnPeozlUG/y+oIMSLdptHxb3GK6cpSVhA=",
         "owner": "NixOS",
@@ -87,7 +136,7 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1749285348,
         "narHash": "sha256-frdhQvPbmDYaScPFiCnfdh3B/Vh81Uuoo0w5TkWmmjU=",
@@ -102,7 +151,7 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1748889542,
         "narHash": "sha256-Hb4iMhIbjX45GcrgOp3b8xnyli+ysRPqAgZ/LZgyT5k=",
@@ -117,7 +166,7 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1750134718,
         "narHash": "sha256-v263g4GbxXv87hMXMCpjkIxd/viIF7p3JpJrwgKdNiI=",
@@ -132,7 +181,7 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1714253743,
         "narHash": "sha256-mdTQw2XlariysyScCv2tTE45QSU9v/ezLcHJ22f0Nxc=",
@@ -148,7 +197,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_8": {
       "locked": {
         "lastModified": 1746141548,
         "narHash": "sha256-IgBWhX7A2oJmZFIrpRuMnw5RAufVnfvOgHWgIdds+hc=",
@@ -166,7 +215,7 @@
     },
     "noshell": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_7"
       },
       "locked": {
         "lastModified": 1717396029,
@@ -184,18 +233,37 @@
     },
     "root": {
       "inputs": {
+        "best-blog": "best-blog",
         "elmskell-blog": "elmskell-blog",
         "jank-client": "jank-client",
         "math-project": "math-project",
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_6",
         "noshell": "noshell",
         "spacebar-server": "spacebar-server"
+      }
+    },
+    "rust-http-server": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1750103311,
+        "narHash": "sha256-aefZc/S5xu26OeNjUXA9whnAK9D7lWejqrqQ2xfPw+U=",
+        "ref": "refs/heads/master",
+        "rev": "02acb04f650b494de1dfb78474bf7e397e0f2995",
+        "revCount": 1,
+        "type": "git",
+        "url": "https://git.mtgmonkey.net/Andromeda/rust-http-server.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.mtgmonkey.net/Andromeda/rust-http-server.git"
       }
     },
     "spacebar-server": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_8"
       },
       "locked": {
         "lastModified": 1748414795,

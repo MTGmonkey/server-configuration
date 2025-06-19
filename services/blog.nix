@@ -1,5 +1,5 @@
 {
-  elmskell-blog,
+  best-blog,
   lib,
   pkgs,
   ...
@@ -18,13 +18,6 @@
       }
     ];
   };
-  ferron-conf-nix = {
-    global = {
-      port = 8181;
-      secure = false;
-      wwwroot = "${elmskell-blog.packages.x86_64-linux.default}/wwwroot";
-    };
-  };
 in {
   services.anubis = {
     instances.blog = {
@@ -36,7 +29,7 @@ in {
         METRICS_BIND = "[::1]:9182";
         METRICS_BIND_NETWORK = "tcp";
         POLICY_FNAME = "/etc/anubis/blog.botPolicies.yaml";
-        TARGET = "http://localhost:8181";
+        TARGET = "http://localhost:9345";
       };
     };
   };
@@ -44,10 +37,10 @@ in {
     source = (pkgs.formats.yaml {}).generate "" botPolicies-nix;
     mode = "644";
   };
-  systemd.services.blog-ferron = {
+  systemd.services.blog = {
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${lib.getExe pkgs.ferron} --config=/etc/blog.ferron.yaml";
+      ExecStart = "${lib.getExe best-blog.packages.x86_64-linux.default}";
       RemainAfterExit = true;
       Restart = "always";
       RestartMaxDelaySec = "1m";
@@ -55,9 +48,5 @@ in {
       RestartSteps = 9;
     };
     wantedBy = ["multi-user.target"];
-  };
-  environment.etc."blog.ferron.yaml" = {
-    source = (pkgs.formats.yaml {}).generate "" ferron-conf-nix;
-    mode = "644";
   };
 }
